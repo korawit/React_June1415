@@ -2,13 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+//import Hello from './Hello';
+import Counter from './Counter';
+import Buylist from './Buylist';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <>
+    {/*<Hello name="korawit" surname="orkphol" age={30}/>
+    <Hello name="John"/>
+    <Hello surname="Doe"/>
+    <Counter />
+    <Counter />*/}
+    <Buylist />
+    </> 
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
