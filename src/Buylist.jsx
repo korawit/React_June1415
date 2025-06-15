@@ -7,9 +7,14 @@ function Item({ name}) {
 }
 export default function Buylist() {
     const [value,setValue]=useState("");
-    const ingred=["Banana","Milk","Egg","Onion","Bread"];
-    const filterList = ingred.filter(it=>it.toLowerCase().includes(value.toLowerCase()));
-    const itemList=filterList.map(it=><Item name={it}/>)
+    const ingred=[
+        {id:0,name:"Banana"},
+        {id:1,name:"Milk"},
+        {id:2,name:"Egg"},
+        {id:3,name:"Onion"},
+        {id:4,name:"Bread"}];
+    const filterList = ingred.filter(it=>it.name.toLowerCase().includes(value.toLowerCase()));
+    const itemList=filterList.map(it=><Item key={it.id} name={it.name}/>)
     return (<><h4>Buying List</h4>
         Keyword : <input type="text" value={value} 
         onChange={e=>setValue(e.target.value)}/>
